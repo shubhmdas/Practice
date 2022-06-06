@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin')
+}}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="https://cdn.dribbble.com/users/24078/screenshots/15522433/media/e92e58ec9d338a234945ae3d3ffd5be3.jpg?compress=1&resize=400x300" alt="Logo" height="40px" style="margin-right: 20px;">
+        {{ site_header|default:_('Django administration') }}</a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
